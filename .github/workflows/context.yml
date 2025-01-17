@@ -12,8 +12,8 @@ jobs:
           echo "Actor! $MY_ACTOR"
         env:
           MY_ACTION: ${{ github.action }}
-          MY_ACTOR": ${{ github.triggering_actor }}
+          MY_ACTOR": ${{ github.workspace }}
       - name: "Second Step"
         run: echo "Second step! $MY_ACTOR"
         env:
-          MY_ACTOR": ${{ github.triggering_actor }}
+          MY_ACTOR": ${{ github.workspace }}
